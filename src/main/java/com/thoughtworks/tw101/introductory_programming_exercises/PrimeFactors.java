@@ -6,7 +6,10 @@ package com.thoughtworks.tw101.introductory_programming_exercises;
 //
 //  For example, generate(1) should return an empty list and generate(30) should return the numbers: 2,3,5.
 
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 public class PrimeFactors {
     public static void main(String[] args) {
@@ -14,6 +17,19 @@ public class PrimeFactors {
     }
 
     private static List<Integer> generate(int n) {
-        return null;
+        Set<Integer> factors = new LinkedHashSet<Integer>();
+        if(n<2){
+            return new ArrayList<Integer>();
+        }
+        int sqrt =(int)Math.sqrt(n);
+        if(n%2==0){
+            factors.add(2);
+        }
+        for (int i=3;i<=sqrt;i+=2) {
+            if (n % i == 0) {
+                factors.add(i);
+            }
+        }
+        return new ArrayList<Integer>(factors);
     }
 }
