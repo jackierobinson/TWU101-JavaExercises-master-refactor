@@ -6,19 +6,6 @@ public class Main {
 //    and ending integer value.
 
     public static void main(String[] args) {
-        OddSum oddSum = new OddSum();
-
-        Integer sum = oddSum.of(3, 100);
-        System.out.println(sum);
-        sum = oddSum.of(-100, -3);
-        System.out.println(sum);
-        sum = oddSum.of(-100, 0);
-        System.out.println(sum);
-        sum = oddSum.of(0, 0);
-        System.out.println(sum);
-        sum = oddSum.of(-100, 5);
-        System.out.println(sum);
-        sum = oddSum.of(0,6);
-        System.out.println(sum);
+        System.out.println(OddSum.of(3,100));
     }
 }
