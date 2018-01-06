@@ -15,13 +15,17 @@ public class DiamondExercises {
     private static void drawAnIsoscelesTriangle(int n) {
         int width = 2*(n-1)+1;
         for(int row=0; row<n; row++){
-            int numberOfAsterisks = 2*row+1;
-            int numberOfSpaces = (width-numberOfAsterisks);
-            print(" ",numberOfSpaces/2);
-            print("*",numberOfAsterisks);
-            print(" ",numberOfSpaces/2);
-            System.out.println();
+            printDiamondRow(width, row);
         }
+    }
+
+    private static void printDiamondRow(int width, int row) {
+        int numberOfAsterisks = 2*row+1;
+        int numberOfSpaces = (width-numberOfAsterisks);
+        print(" ",numberOfSpaces/2);
+        print("*",numberOfAsterisks);
+        print(" ",numberOfSpaces/2);
+        System.out.println();
     }
 
     private static void print(String str,int n){
@@ -47,12 +51,7 @@ public class DiamondExercises {
         int width = 2*(n-1)+1;
         int height=n-1;
         for(int row=0; row<height; row++){
-            int numberOfAsterisks = 2*row+1;
-            int numberOfSpaces = (width-numberOfAsterisks);
-            print(" ",numberOfSpaces/2);
-            print("*",numberOfAsterisks);
-            print(" ",numberOfSpaces/2);
-            System.out.println();
+            printDiamondRow(width, row);
         }
     }
 
@@ -66,12 +65,7 @@ public class DiamondExercises {
         int width = 2*(n-1)+1;
         int height=n-1;
         for(int row=height-1; row>-1; row--){
-            int numberOfAsterisks = 2*row+1;
-            int numberOfSpaces = (width-numberOfAsterisks);
-            print(" ",numberOfSpaces/2);
-            print("*",numberOfAsterisks);
-            print(" ",numberOfSpaces/2);
-            System.out.println();
+            printDiamondRow(width, row);
         }
     }
 
