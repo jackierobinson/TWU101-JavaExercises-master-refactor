@@ -15,11 +15,11 @@ public class DiamondExercises {
     private static void drawAnIsoscelesTriangle(int n) {
         int width = getWidth(n);
         for(int row=0; row<n; row++){
-            printDiamondRow(width, row);
+            printRow(width, row);
         }
     }
 
-    private static void printDiamondRow(int width, int row) {
+    private static void printRow(int width, int row) {
         int numberOfAsterisks = 2*row+1;
         int numberOfSpaces = (width-numberOfAsterisks);
         print(" ",numberOfSpaces/2);
@@ -51,7 +51,7 @@ public class DiamondExercises {
         int width = getWidth(n);
         int height = getHeight(n);
         for(int row=0; row<height; row++){
-            printDiamondRow(width, row);
+            printRow(width, row);
         }
     }
 
@@ -73,7 +73,7 @@ public class DiamondExercises {
         int width = getWidth(n);
         int height = getHeight(n);
         for(int row=height-1; row>-1; row--){
-            printDiamondRow(width, row);
+            printRow(width, row);
         }
     }
 
