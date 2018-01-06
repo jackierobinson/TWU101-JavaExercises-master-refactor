@@ -13,7 +13,12 @@ public class Player {
 
     public int getNextGuess(){
         Scanner scanner = new Scanner(System.in);
+        int result = getValidResult(scanner);
+        guesses.add(result);
+        return result;
+    }
 
+    private int getValidResult(Scanner scanner) {
         int result = 0;
         boolean waitingForValidGuess = true;
         while(waitingForValidGuess) {
@@ -25,11 +30,9 @@ public class Player {
                 scanner.next();
             }
         }
-
-
-        guesses.add(result);
         return result;
     }
+
     public void displayGuesses(){
         StringBuilder guessesBuilder = new StringBuilder("Your guesses:");
         for (int guess : guesses){
