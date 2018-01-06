@@ -13,7 +13,7 @@ public class DiamondExercises {
 //             ***
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
-        int width = 2*(n-1)+1;
+        int width = getWidth(n);
         for(int row=0; row<n; row++){
             printDiamondRow(width, row);
         }
@@ -48,22 +48,30 @@ public class DiamondExercises {
     }
 
     private static void drawADiamondTop(int n) {
-        int width = 2*(n-1)+1;
-        int height=n-1;
+        int width = getWidth(n);
+        int height = getHeight(n);
         for(int row=0; row<height; row++){
             printDiamondRow(width, row);
         }
     }
 
+    private static int getHeight(int n) {
+        return n-1;
+    }
+
+    private static int getWidth(int n) {
+        return 2*(n-1)+1;
+    }
+
     private static void drawADiamondMiddle(int n) {
-        int width = 2*(n-1)+1;
+        int width = getWidth(n);
         print("*",width);
         System.out.println();
     }
 
     private static void drawADiamondBottom(int n){
-        int width = 2*(n-1)+1;
-        int height=n-1;
+        int width = getWidth(n);
+        int height = getHeight(n);
         for(int row=height-1; row>-1; row--){
             printDiamondRow(width, row);
         }
